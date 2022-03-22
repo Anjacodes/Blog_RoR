@@ -1,29 +1,15 @@
-# README
+# My Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This website shows a list of posts and empowers readers to interact with them by adding comments and liking posts.
 
-Things you may want to cover:
+<br>
 
-* Ruby version
+## 🪛 Built with
+Ruby on Rails
 
-* System dependencies
+<br>
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-<h2>Installing Rails</h2>
+<h3>Installing Rails</h3>
 
 Before you install Rails, you should check to make sure that your system has the proper prerequisites installed. These include:
 
@@ -31,6 +17,8 @@ Before you install Rails, you should check to make sure that your system has the
     SQLite3
     Node.js
     Yarn
+
+<br>
 
 <h3>Installing Ruby</h3>
 
@@ -89,7 +77,7 @@ To run the app in your browser, simply run the following command in your termina
 
 Then, open https://localhost:3000 in your browser to view the app.
 
-## Authors
+## ✏️ Authors
 
 👤 **Anja**
 
