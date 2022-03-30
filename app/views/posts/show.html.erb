@@ -1,13 +1,14 @@
-<h3><%=@post.title%> by <%=@user.name%></h3>
-    <p>
-        Comments: <%=@post.commentCounter%>, Likes: <%= @post.likesCounter%>
-    </p>
+<div class="m-5vw">
+  <div class="border-solid p-20 flex-container flex-col">
+    <h3><%=@post.title%> by <%=@user.name%></h3>
+    <p class="align-right font-sm"> Comments: <%=@post.commentCounter%>, Likes: <%= @post.likesCounter%></p>
     <p><%=@post.text%></p>
-
-<ul>
+  </div>
+<ul class="border-solid p-20 mt-15px">
     <% @comments.each do |comment| %>
         <li>
             <%= User.find(comment.user_id).name %>: <%=comment.text %>
         </li>
     <% end %>
 </ul>
+</div>
