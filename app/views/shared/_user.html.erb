@@ -1,0 +1,9 @@
+<ul>
+  <li class="flex-container mb-5vh border-solid">
+  <%= image_tag(@user.photo, :class => "w-15")%>
+    <div class="flex-container flex-col m-20 space-btw w-100">
+      <h2>This is <%=@user.name%></h2>
+      <p class="align-right mt-auto">Number of posts: <%=@user.postsCounter%> </p>
+    <div>
+  </li>
+</ul>

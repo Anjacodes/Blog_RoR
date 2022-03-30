@@ -1,13 +1,6 @@
 <div class="m-5vw">
-<ul>
-    <li class="flex-container mb-5vh border-solid">
-    <%= image_tag(@user.photo, :class => "w-15")%>
-      <div class="flex-container flex-col m-20 space-btw w-100">
-        <h2><%= @user.name %></h2>
-        <p>Number of posts: <%=@user.postsCounter%><p>
-      </div>
-    </li>
-</ul>
+
+<%= render "shared/user" %>
 
 <ul>
     <% @posts.each do |post| %>

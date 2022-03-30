@@ -51,6 +51,10 @@ ul {
   margin-top: 15px;
 }
 
+.mt-auto {
+  margin-top: auto;
+}
+
 .border-solid {
   border: 1px solid black;
 }
