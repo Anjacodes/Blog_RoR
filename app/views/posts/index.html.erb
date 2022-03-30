@@ -1,1 +1,28 @@
-<h1>This is a list of all posts for a certain user</h1>
+<div class="m-5vw">
+<ul>
+    <li class="flex-container mb-5vh border-solid">
+    <%= image_tag(@user.photo, :class => "w-15")%>
+      <div class="flex-container flex-col m-20 space-btw w-100">
+        <h2><%= @user.name %></h2>
+        <p>Number of posts: <%=@user.postsCounter%><p>
+      </div>
+    </li>
+</ul>
+
+<ul>
+    <% @posts.each do |post| %>
+        <li class="flex-container mb-5vh flex-col">
+          <div class="border-solid flex-container flex-col space-between p-20">
+            <h3 class="mb-5vh"><%= link_to post.title, user_post_path(id:post.id)%></h3>
+            <p><%= post.text %></p>
+            <p class="align-right font-sm">Comments: <%=post.commentCounter%> , Likes: <%= post.likesCounter %> </p>
+          </div>
+            <ul class="border-solid mt-15px p-20">
+            <% post.comments.each do |comment|  %>
+                <li><%= User.find(comment.user_id).name %>: <%=comment.text %><li>
+            <% end %>
+            </ul>
+        </li>
+    <% end %>
+</ul>
+</div>
