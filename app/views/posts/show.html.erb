@@ -1,1 +1,13 @@
-<h1>This is a specific post for a specific user</h1>
+<h3><%=@post.title%> by <%=@user.name%></h3>
+    <p>
+        Comments: <%=@post.commentCounter%>, Likes: <%= @post.likesCounter%>
+    </p>
+    <p><%=@post.text%></p>
+
+<ul>
+    <% @comments.each do |comment| %>
+        <li>
+            <%= User.find(comment.user_id).name %>: <%=comment.text %>
+        </li>
+    <% end %>
+</ul>
