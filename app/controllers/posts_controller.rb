@@ -16,15 +16,16 @@ class PostsController < ApplicationController
     @post = @user.posts.create(post_params)
 
     if @post.save
-      redirect_to user_path(@user), notice: "Successful!"
+      redirect_to user_path(@user), notice: 'Successful!'
     else
-      flash.now[:notice] = "Post could not be created"
+      flash.now[:notice] = 'Post could not be created'
       render :new
     end
   end
 
   private
-    def post_params
-      params.require(:post).permit(:title, :text)
-    end
+
+  def post_params
+    params.require(:post).permit(:title, :text)
+  end
 end
