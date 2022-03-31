@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 ul {
@@ -42,10 +41,6 @@ ul {
 
 .m-5vw {
   margin: 5vw;
-}
-
-.mb-2vh {
-  margin-bottom: 2vh;
 }
 
 .mb-5vh {
