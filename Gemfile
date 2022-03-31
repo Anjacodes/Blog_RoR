@@ -83,4 +83,3 @@ gem 'cssbundling-rails'
 gem 'jsbundling-rails'
 
 gem 'bullet'
-
