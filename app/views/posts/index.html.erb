@@ -12,7 +12,7 @@
           </div>
             <ul class="border-solid mt-15px p-20">
             <% if post.comments.empty? %> <li>There aren't any comments here yet, be the first to write a comment!</li>
-            <% else post.comments.each do |comment|  %>
+            <% else Comment.includes(:post).where(posts: {id: post.id}).each do |comment|  %>
                 <li><%= User.find(comment.user_id).name %>: <%=comment.text %><li>
             <% end %>
             <% end %>
