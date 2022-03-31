@@ -6,6 +6,7 @@ class Post < ApplicationRecord
 
   validates :title, presence: true, length: { in: 1..250 }
   validates :commentCounter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, allow_blank: true
+  validates :likesCounter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }, allow_blank: true
 
   def update_counter
     user = User.find(user_id)
