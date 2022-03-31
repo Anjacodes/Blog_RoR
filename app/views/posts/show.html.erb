@@ -1,14 +1,21 @@
 <div class="m-5vw">
-  <div class="border-solid p-20 flex-container flex-col">
+  <div class="border-solid p-20 flex-container flex-col mb-2vh">
     <h3><%=@post.title%> by <%=@user.name%></h3>
     <p class="align-right font-sm"> Comments: <%=@post.commentCounter%>, Likes: <%= @post.likesCounter%></p>
     <p><%=@post.text%></p>
   </div>
-<ul class="border-solid p-20 mt-15px">
-    <% @comments.each do |comment| %>
+
+  <%= button_to 'Like this post', user_post_likes_path(@user, @post), method: :post %>
+
+  <ul class="border-solid p-20 mt-15px mb-5vh">
+    <% if @comments.empty? %> <li>There aren't any comments here yet, be the first to write a comment! </li>
+    <% else @comments.each do |comment| %>
         <li>
             <%= User.find(comment.user_id).name %>: <%=comment.text %>
         </li>
     <% end %>
-</ul>
+    <% end %>
+  </ul>
+
+<%= render "comments/form" %>
 </div>

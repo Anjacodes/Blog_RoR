@@ -11,11 +11,15 @@
             <p class="align-right font-sm">Comments: <%=post.commentCounter%> , Likes: <%= post.likesCounter %> </p>
           </div>
             <ul class="border-solid mt-15px p-20">
-            <% post.comments.each do |comment|  %>
+            <% if post.comments.empty? %> <li>There aren't any comments here yet, be the first to write a comment!</li>
+            <% else post.comments.each do |comment|  %>
                 <li><%= User.find(comment.user_id).name %>: <%=comment.text %><li>
+            <% end %>
             <% end %>
             </ul>
         </li>
     <% end %>
 </ul>
+
+<%= render "form" %>
 </div>

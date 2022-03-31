@@ -19,6 +19,8 @@
     <% end %>
 </ul>
 
-<button class="mt-15px"><%= link_to "See All Posts", user_posts_path(@user.id), :class => "decoration-none" %></button>
+<button class="mt-15px mb-5vh"><%= link_to "See All Posts", user_posts_path(@user.id), :class => "decoration-none" %></button>
+
+<%= render "posts/form" %>
 
 </div>
