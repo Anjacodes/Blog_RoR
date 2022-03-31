@@ -1,5 +1,9 @@
 <div class="m-5vw">
 
+<% flash.each do |name, msg| -%>
+  <%= content_tag :div, msg, class: name %>
+<% end -%>
+
 <%= render "shared/user" %>
 
 <div class="border-solid">

@@ -2,9 +2,9 @@ class LikesController < ApplicationController
   before_action :find_post, :find_user
 
   def create
-    @like = @post.likes.create(author: @user)
+    @like = @post.likes.new(author: @user)
     if @like.save
-      redirect_to user_post_path(@user, @post), notice: 'Successful!'
+      redirect_to user_post_path(@user, @post), notice: 'Like added successfully!'
     else
       flash.now[:notice] = 'Like could not be added'
       #   render "posts/show"
