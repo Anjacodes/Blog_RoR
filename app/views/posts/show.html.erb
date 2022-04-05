@@ -1,4 +1,8 @@
 <div class="m-5vw">
+  <% flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, class: name %>
+  <% end -%>
+
   <div class="border-solid p-20 flex-container flex-col mb-2vh">
     <h3><%=@post.title%> by <%=@user.name%></h3>
     <p class="align-right font-sm"> Comments: <%=@post.commentCounter%>, Likes: <%= @post.likesCounter%></p>
