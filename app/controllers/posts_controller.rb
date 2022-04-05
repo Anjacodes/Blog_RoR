@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!
-
+  load_and_authorize_resource
+  
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts
@@ -14,8 +14,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    @user = current_user
-    @post = @user.posts.new(post_params)
+    @user = User.find(params[:user_id])
+    @post = current_user.posts.new(post_params)
     @post.save
 
     if @post.save
@@ -24,6 +24,13 @@ class PostsController < ApplicationController
       flash.now[:notice] = 'Post could not be created'
       render 'users/show'
     end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+
+    redirect_to user_path, notice: 'Post is deleted!'
   end
 
   private

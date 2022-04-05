@@ -16,6 +16,9 @@
             <p class="align-right font-sm">Comments: <%=post.commentCounter%>, Likes: <%=post.likesCounter%></p>
           </div>
         </li>
+        <% if can? :destroy, post %>
+          <li><%= button_to "Delete Post", user_post_path(post.id), method: :delete %></li>
+        <% end %>
     <% end %>
 </ul>
 

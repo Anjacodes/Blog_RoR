@@ -82,3 +82,4 @@ end
 gem 'cssbundling-rails'
 gem 'devise'
 gem 'jsbundling-rails'
+gem 'cancancan'

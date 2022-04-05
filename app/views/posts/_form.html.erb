@@ -1,5 +1,5 @@
 <h2 class="mb-2vh">Write a new post:</h2>
-<%= form_with model: [ @user, @user.posts.build] do |form| %>
+<%= form_with model: [ current_user, current_user.posts.build] do |form| %>
     <p>
       <%= form.label :title %><br>
       <%= form.text_field :title %>

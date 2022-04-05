@@ -18,6 +18,16 @@
     <main class="container mx-auto mt-28 px-5 flex">
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
+
+      <% if current_user %>
+        <p>Hello <%= current_user.name %> </p>
+        <p>You are logged as: <%= current_user.role %>  </p>
+        <%= button_to 'Sign Out', destroy_user_session_path, method: :delete %>
+      <% else %>
+        <p>You are not signed in</p>
+        <%= link_to 'Sign Up', new_user_registration_path %>
+        <%= link_to 'Sign In', new_user_session_path %>
+      <% end %>
       <%= yield %>
     </main>
   </body>
