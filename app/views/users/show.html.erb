@@ -1,9 +1,5 @@
 <div class="m-5vw">
 
-<% flash.each do |name, msg| -%>
-  <%= content_tag :div, msg, class: name %>
-<% end -%>
-
 <%= render "shared/user" %>
 
 <div class="border-solid">
@@ -23,8 +19,11 @@
     <% end %>
 </ul>
 
-<button class="mt-15px mb-5vh"><%= link_to "See All Posts", user_posts_path(@user.id), :class => "decoration-none" %></button>
-
+<div class="flex-container">
+  <button class="mt-15px mb-5vh mr-5vw"><%= link_to "See All Posts", user_posts_path(@user.id), :class => "decoration-none" %></button>
+  <%= button_to "Log out", destroy_user_session_path, method: :delete, :class => "decoration-none mt-15px mb-5vh mr-5vw" %>
+  <%= button_to "Edit Profile", user_registration_path, method: :patch, :class => "decoration-none mt-15px mb-5vh" %>
+</div>
 <%= render "posts/form" %>
 
 </div>

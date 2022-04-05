@@ -28,6 +28,14 @@ ul {
   margin-left: auto;
 }
 
+.align-center {
+  align-items: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
 .w-100 {
   width: 100%;
 }
@@ -60,8 +68,16 @@ ul {
   margin-top: auto;
 }
 
+.mr-5vw {
+  margin-right: 5vw;
+}
+
 .border-solid {
   border: 1px solid black;
+}
+
+.border-btm {
+  border-bottom: 1px solid black;
 }
 
 .p-20 {
@@ -74,4 +90,16 @@ ul {
 
 .decoration-none {
   text-decoration: none;
+}
+
+.background-grey {
+  background-color: grey;
+}
+
+.color-white {
+  color: white;
+}
+
+.color-white:hover {
+  color: black;
 }

@@ -9,7 +9,15 @@
   </head>
 
   <body>
+  <nav>
+    <ul class= "flex-container align-center justify-end p-20 background-grey">
+      <li class="mr-5vw"><%= link_to "Sign Up", new_user_registration_path, :class => "color-white decoration-none"%></li>
+      <li class="mr-5vw"><%= link_to "Sign in", new_user_session_path, :class => "color-white decoration-none" %></li>
+    </ul>
+  </nav>
     <main class="container mx-auto mt-28 px-5 flex">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
       <%= yield %>
     </main>
   </body>
