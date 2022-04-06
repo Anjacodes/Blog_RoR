@@ -38,7 +38,7 @@ RSpec.describe Post, type: :model do
       user.increment!(:postsCounter)
       expect(user.postsCounter).to eql 1
     end
-  
+  end
 
   it 'likesCounter is an integer' do
     subject.likesCounter = 'abc'

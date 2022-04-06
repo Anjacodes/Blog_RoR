@@ -1,5 +1,6 @@
 <div class="m-5vw">
 
+<% if current_user %>
 <%= render "shared/user" %>
 
 <div class="border-solid">
@@ -29,4 +30,8 @@
 </div>
 <%= render "posts/form" %>
 
+<% else %>
+  <h3>New here?</h3>
+  <%= link_to 'Sign Up', new_user_registration_path %>
+<% end %>
 </div>
