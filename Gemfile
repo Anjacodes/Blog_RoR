@@ -83,3 +83,5 @@ gem 'cancancan'
 gem 'cssbundling-rails'
 gem 'devise'
 gem 'jsbundling-rails'
+
+gem 'bullet'
