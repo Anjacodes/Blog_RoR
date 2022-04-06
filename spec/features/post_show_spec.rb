@@ -38,6 +38,5 @@ RSpec.describe 'The page show page', type: :feature do
       visit @path
       expect(page).to have_content 'test post'
     end
-
   end
 end
