@@ -39,5 +39,11 @@ RSpec.describe 'The page show page', type: :feature do
       expect(page).to have_content 'test post'
     end
 
+    it 'shows the username and comment of each commentor' do
+      visit @path
+      expect(page).to have_content 'test: test comment'
+      expect(page).to have_content 'test 2: test comment 2'
+    end
+
   end
 end
