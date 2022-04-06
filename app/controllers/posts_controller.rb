@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  load_and_authorize_resource
-  
+  # load_and_authorize_resource
+
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts
@@ -16,7 +16,6 @@ class PostsController < ApplicationController
   def create
     @user = User.find(params[:user_id])
     @post = current_user.posts.new(post_params)
-    @post.save
 
     if @post.save
       redirect_to user_path(@user), notice: 'Post added successfully!'
@@ -27,7 +26,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
+    @post = Post.find(params[:post_id])
     @post.destroy
 
     redirect_to user_path, notice: 'Post is deleted!'
