@@ -85,6 +85,11 @@ Then, open https://localhost:3000 in your browser to view the app.
 - Twitter: [@Anja_Schmidt7](https://twitter.com/Anja_Schmidt7)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/anja-schmidt7/)
 
+👤 **Yigit Mersin**
+
+- GitHub: [@ygtmrsn](https://github.com/ygtmrsn)
+- Twitter: [@ygtmrsn](https://twitter.com/ygtmrsn)
+- LinkedIn: [yigitmersin](linkedin.com/in/yigitmersin)
 
 ## 🤝 Contributing
 
