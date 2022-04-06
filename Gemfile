@@ -79,7 +79,9 @@ group :development, :test do
   gem 'rspec-rails', '~> 5.0.0'
 end
 
+gem 'cancancan'
 gem 'cssbundling-rails'
+gem 'devise'
 gem 'jsbundling-rails'
 
 gem 'bullet'

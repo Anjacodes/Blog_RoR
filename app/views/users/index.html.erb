@@ -1,7 +1,11 @@
 <ul class="m-5vw">
 <% @users.each do |user| %>
     <li class="flex-container mb-5vh border-solid">
-        <%= image_tag(user.photo, :class => "w-15")%>
+        <% if user.photo.nil? %>
+        <%= image_tag("https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png", :class => "w-15")%>
+        <% else %>
+         <%= image_tag(user.photo, :class => "w-15")%>
+        <% end %>
         <div class="flex-container flex-col m-20 space-btw w-100">
           <h2><%=link_to user.name, user%></h2>
           <p class="align-right">Number of posts: <%= user.postsCounter%></p>

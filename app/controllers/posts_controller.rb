@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts.includes(:comments)
@@ -13,7 +15,7 @@ class PostsController < ApplicationController
 
   def create
     @user = User.find(params[:user_id])
-    @post = @user.posts.new(post_params)
+    @post = current_user.posts.new(post_params)
 
     if @post.save
       redirect_to user_path(@user), notice: 'Post added successfully!'
@@ -21,6 +23,13 @@ class PostsController < ApplicationController
       flash.now[:notice] = 'Post could not be created'
       render 'users/show'
     end
+  end
+
+  def destroy
+    post = Post.find(params[:post_id])
+    post.destroy
+
+    redirect_to user_path, notice: 'Post is deleted!'
   end
 
   private
