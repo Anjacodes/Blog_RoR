@@ -15,7 +15,10 @@
     <% if @comments.empty? %> <li>There aren't any comments here yet, be the first to write a comment! </li>
     <% else @comments.each do |comment| %>
         <li>
-            <%= User.find(comment.user_id).name %>: <%=comment.text %>
+          <%= User.find(comment.user_id).name %>: <%=comment.text %>
+        <% if can? :destroy, comment %>
+          <%= button_to "Delete Comment", user_post_comment_path(user_id: current_user.id, post_id: @post.id, id:comment.id), method: :delete %>
+        <% end %>
         </li>
     <% end %>
     <% end %>

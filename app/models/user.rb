@@ -3,6 +3,9 @@ class User < ApplicationRecord
   # :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
+  enum role: %i[user admin]
+  after_initialize :set_default_role, if: :new_record?
+
   has_many :posts
   has_many :comments
   has_many :likes, foreign_key: :user_id, dependent: :destroy
@@ -12,5 +15,9 @@ class User < ApplicationRecord
 
   def last_three
     posts.order(created_at: :desc).limit(3)
+  end
+
+  def set_default_role
+    self.role ||= :user
   end
 end
