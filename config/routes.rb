@@ -8,9 +8,9 @@ Rails.application.routes.draw do
     end
   end
 
-  root "users#index"
-
   get '/api/users/:id/posts', to: 'api#posts_index'
   get '/api/users/:id/posts/:id', to: 'api#list_comments'
   post '/api/users/:id/posts/:id', to: 'api#create_comment'
+
+  root "users#index"
 end
