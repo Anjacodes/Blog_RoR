@@ -36,11 +36,11 @@ RSpec.describe 'The user show page', type: :feature do
     end
 
     it "redirects me to post's show page when clicking on a post title" do
-        path = @path
-        visit path
-        click_on 'Test Post 3'
-        expect(current_path).to eql("#{path}/posts/#{@post3.id}")
-      end
+      path = @path
+      visit path
+      click_on 'Test Post 3'
+      expect(current_path).to eql("#{path}/posts/#{@post3.id}")
+    end
 
     it 'redirects me to see all posts when clicking the button' do
       path = @path
