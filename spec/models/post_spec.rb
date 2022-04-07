@@ -1,7 +1,6 @@
 require_relative '../rails_helper'
 
 RSpec.describe Post, type: :model do
-
   user = User.create(name: 'Harriet', postsCounter: 0)
   subject { Post.new(title: 'Title', text: 'This is the text', user_id: 1, commentCounter: 3, likesCounter: 8) }
 

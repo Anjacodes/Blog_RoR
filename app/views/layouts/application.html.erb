@@ -21,7 +21,7 @@
 
       <% if current_user %>
           <p class="m-20">Hello <%= current_user.name %> </p>
-          <p>You are logged as: <%= current_user.role %>  </p>
+          <p class="m-20">You are logged as: <%= current_user.role %>  </p>
           <%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class: "m-20"  %>
       <% else %>
           <p class="m-20">You are not signed in</p>

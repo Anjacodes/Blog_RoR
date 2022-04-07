@@ -77,6 +77,14 @@ To run the app in your browser, simply run the following command in your termina
 
 Then, open https://localhost:3000 in your browser to view the app.
 
+<br>
+
+### Testing
+
+To run the tests run `bundle exec rspec` in your console. Then, run `rspec spec/folder_name/file_name_spec.rb`.
+
+<br>
+
 ## ✏️ Authors
 
 👤 **Anja**
