@@ -28,8 +28,8 @@ RSpec.describe 'The user index page', type: :feature do
 
     it 'shows the number of posts for each user' do
       visit 'users'
-      expect(@user1.postsCounter).to eql 1
-      expect(@user2.postsCounter).to eql 3
+      expect(page).to have_content('Number of posts: 1')
+      expect(page).to have_content('Number of posts: 3')
     end
 
     it "redirects me to user's show page when clicking on a user" do
