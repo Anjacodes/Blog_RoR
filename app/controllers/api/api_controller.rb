@@ -24,6 +24,5 @@ module Api
         render json: @new_comment.errors, status: :unprocessable_entity
       end
     end
-
   end
 end
