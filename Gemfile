@@ -86,3 +86,5 @@ gem 'devise'
 gem 'jsbundling-rails'
 
 gem 'bullet'
+
+gem 'jwt'
