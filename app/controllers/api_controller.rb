@@ -33,5 +33,4 @@ class ApiController < ApplicationController
     @post = Post.find(params[:id])
     @post.id
   end
-
 end
