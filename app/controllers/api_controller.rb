@@ -13,7 +13,7 @@ class ApiController < ApplicationController
 
   def create_comment
     user = User.find(params[:user_id])
-    @new_comment = user.comments.new(post_id: find_post, text: "New Api Comment")
+    @new_comment = user.comments.new(post_id: find_post, text: 'New Api Comment')
 
     if @new_comment.save
       render json: @new_comment, status: :created
