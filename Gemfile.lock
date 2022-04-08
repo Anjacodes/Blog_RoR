@@ -74,9 +74,6 @@ GEM
     bootsnap (1.11.1)
       msgpack (~> 1.2)
     builder (3.2.4)
-    bullet (7.0.1)
-      activesupport (>= 3.0.0)
-      uniform_notifier (~> 1.11)
     cancancan (3.3.0)
     capybara (3.36.0)
       addressable
@@ -126,7 +123,8 @@ GEM
       activesupport (>= 5.0.0)
     jsbundling-rails (1.0.2)
       railties (>= 6.0.0)
-    jwt (2.3.0)
+    json-schema (2.8.1)
+      addressable (>= 2.4)
     loofah (2.15.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -224,6 +222,19 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.11.0)
+    rswag (2.5.1)
+      rswag-api (= 2.5.1)
+      rswag-specs (= 2.5.1)
+      rswag-ui (= 2.5.1)
+    rswag-api (2.5.1)
+      railties (>= 3.1, < 7.1)
+    rswag-specs (2.5.1)
+      activesupport (>= 3.1, < 7.1)
+      json-schema (~> 2.2)
+      railties (>= 3.1, < 7.1)
+    rswag-ui (2.5.1)
+      actionpack (>= 3.1, < 7.1)
+      railties (>= 3.1, < 7.1)
     rubocop (1.26.0)
       parallel (~> 1.10)
       parser (>= 3.1.0.0)
@@ -259,7 +270,6 @@ GEM
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.1.0)
-    uniform_notifier (1.16.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.0)
@@ -284,7 +294,6 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
-  bullet
   cancancan
   capybara
   cssbundling-rails
@@ -294,12 +303,12 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   jsbundling-rails
-  jwt
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.3)
   rails-controller-testing
   rspec-rails (~> 5.0.0)
+  rswag
   rubocop (>= 1.0, < 2.0)
   selenium-webdriver
   sprockets-rails

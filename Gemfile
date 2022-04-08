@@ -85,6 +85,4 @@ gem 'cssbundling-rails'
 gem 'devise'
 gem 'jsbundling-rails'
 
-gem 'bullet'
-
-gem 'jwt'
+gem 'rswag'
